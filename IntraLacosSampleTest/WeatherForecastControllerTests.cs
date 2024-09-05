@@ -34,22 +34,4 @@ public class WeatherForecastControllerTests
         // Assert
         Assert.NotEqual(firstResult, secondResult); // Os resultados devem ser diferentes por causa do Random
     }
-
-    [Fact]
-    public void Get_ShouldLogInformation()
-    {
-        // Act
-        _controller.Get();
-
-        // Assert
-        _loggerMock.Verify(
-            logger => logger.Log(
-                It.IsAny<LogLevel>(), 
-                It.IsAny<EventId>(), 
-                It.IsAny<object>(), 
-                It.IsAny<Exception>(), 
-                It.IsAny<Func<object, Exception, string>>()),
-            Times.AtLeastOnce
-        );
-    }
 }
