@@ -1,0 +1,6 @@
+@IntraLacosSample_HostAddress = http://localhost:5126
+
+GET {{IntraLacosSample_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
